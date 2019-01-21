@@ -1,0 +1,42 @@
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.CheckMenuItem?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.CustomMenuItem?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<AnchorPane fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+    <VBox fx:id="vbMenu" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+        <MenuBar>
+            <Menu text="Main">
+
+                <fx:define>
+                    <ImageView fx:id="ivSave" fitHeight="20" fitWidth="20">
+                        <Image url="@Diskette.png"></Image>
+                    </ImageView>
+                </fx:define>
+                <MenuItem graphic="$ivSave" text="Save" onAction="#handleSaveClicked"/>
+                <MenuItem text="Load" onAction="#handleLoadClicked"/>
+                <MenuItem text="Exit"/>
+
+
+            </Menu>
+            <Menu text="About">
+
+            </Menu>
+        </MenuBar>
+    </VBox>
+
+</AnchorPane>
